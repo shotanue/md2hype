@@ -1,9 +1,34 @@
-{bold # md2hype}
+A text converter that transforms markdown into HTML, powered by unified.js and bun.
 
 {bold ## USAGE}
+```sh
+{bold md2hype} [--help, -h] --file {underline path}
+```
 
-    {dim $} {bold md2hype} [--help, -h] --file {underline path}
 
 {bold ## OPTIONS}
-    --help, -h                  Shows this help message
-    --file {underline path}                 Markdown file path
+--help, -h
+Display this help message for md2hype.
+
+--file {underline path}
+Specify the path to the markdown file for conversion.
+
+--html
+Output only the HTML content, excluding other elements such as frontmatter.
+
+
+{bold ## EXAMPLES}
+Convert 'foo.md' to HTML, including both HTML and frontmatter in JSON:
+```sh
+md2hype --file foo.md 
+```
+
+Use md2hype with stdin:
+```sh
+cat foo.md | md2hype
+```
+
+Output only the HTML conversion of 'foo.md':
+```sh
+md2hype --file foo.md --html
+```
