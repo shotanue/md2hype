@@ -1,0 +1,4 @@
+[install.lockfile]
+# This project pins versions, due to using renovete.
+save = false
+
