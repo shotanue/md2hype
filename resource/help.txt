@@ -1,0 +1,9 @@
+{bold # md2hype}
+
+{bold ## USAGE}
+
+    {dim $} {bold md2hype} [--help, -h] --file {underline path}
+
+{bold ## OPTIONS}
+    --help, -h                  Shows this help message
+    --file {underline path}                 Markdown file path

@@ -1,0 +1,48 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    name: Release binary
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            asset_name: md2hype-linux-amd64
+          - os: macos-12
+            asset_name: md2hype-darwin-amd64
+          - os: macos-13-xlarge
+            asset_name: md2hype-darwin-arm64
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Dump runner information
+        run: |
+          echo "Runner Name: ${{ runner.name }}"
+          echo "Operating System: ${{ runner.os }}"
+          echo "CPU Architecture: ${{ runner.arch}}"
+      - name: Checkout 
+        uses: actions/checkout@v4
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: 1.0.18
+
+      - run: bun install
+      - run: bun ci
+      - run: bun test
+      - run: bun run build
+ 
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@2.7.0
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: md2hype
+          asset_name: ${{ matrix.asset_name }}
+          tag: ${{ github.ref }}
+          overwrite: true
