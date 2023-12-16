@@ -1,4 +1,4 @@
-name: Code quality
+name: Test
 
 on:
   push:
@@ -15,4 +15,4 @@ jobs:
         with:
           bun-version: 1.0.18
       - run: bun install
-      - run: bun run ci
+      - run: bun test
