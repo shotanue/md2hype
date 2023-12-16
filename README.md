@@ -12,8 +12,6 @@ for markdown parsing
 
 ## Installation
 
-WIP
-
 Install the excutable, built by [bun.sh](https://bun.sh)
 
 ```bash
