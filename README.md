@@ -1,6 +1,6 @@
 # md2hype
 
-A text converter that transforms markdown into HTML, powered by [unified.js](https://unifiedjs.com) and [bun.sh](https://bun.sh). This tool seamlessly converts markdown files to HTML, including parsing of frontmatter and support for GitHub flavored markdown.
+A text converter that transforms markdown into HTML, powered by [unified.js](https://unifiedjs.com) and [bun.sh](https://bun.sh).
 
 ## Built-in unifiedjs plugins
 
@@ -61,7 +61,7 @@ md2hype --file foo.md --html
 
 ### Additional Features
 
-- **Standard Input Support**: md2hype can also be used with standard input (stdin), allowing for flexible integration into various workflows.
+- **Standard Input Support**: md2hype can also be used with standard input (stdin).
   
   ```bash
   cat foo.md | md2hype
