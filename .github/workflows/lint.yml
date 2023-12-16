@@ -1,11 +1,11 @@
-name: Code quality
+name: lint
 
 on:
   push:
   pull_request:
 
 jobs:
-  quality:
+  lint:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout 

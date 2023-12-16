@@ -1,11 +1,11 @@
-name: Test
+name: test
 
 on:
   push:
   pull_request:
 
 jobs:
-  quality:
+  test:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout 

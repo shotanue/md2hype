@@ -1,6 +1,6 @@
 # md2hype
 
-![code-quality](https://github.com/shotanue/md2hype/actions/workflows/code-quality.yml/badge.svg)
+![lint](https://github.com/shotanue/md2hype/actions/workflows/lint.yml/badge.svg)
 ![test](https://github.com/shotanue/md2hype/actions/workflows/test.yml/badge.svg)
 
 A text converter that transforms markdown into HTML, powered by [unified.js](https://unifiedjs.com) and [bun.sh](https://bun.sh).
